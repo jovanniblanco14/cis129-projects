@@ -24,6 +24,7 @@ totalAfterTax = orderTotal + afterTax
 
 #The main issue I had at this point was mixing up coffeeAmount and
 #coffeesPurchased. In hindsight it is more obvious
+print('My Coffee and Muffin Shop Receipt')
 print(str(coffeesPurchased) + ' Coffee at $5 each: $ ' + str(coffeeAmount))
 print(str(muffinsPurchased) + ' Muffins at $4 each: $ ' + str(muffinAmount))
 print('6% Tax: $' + str(afterTax))
