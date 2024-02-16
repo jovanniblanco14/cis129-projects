@@ -2,6 +2,9 @@
 TAX = .06
 COFFEE = 5
 MUFFINS = 4
+DONUTS = 3
+TEAS = 4
+
 
 #I will start with welcome message and a prompt for the user
 print('***************************************')
@@ -10,6 +13,10 @@ print('Number of coffees bought?')
 coffeesPurchased = int(input())
 print('Number of muffins bought?')
 muffinsPurchased = int(input())
+print('Number of teas bought?')
+teasPurchased = int(input())
+print('Number of donuts bought?')
+donutsPurchased = int(input())
 print('***************************************')
 #
 #
@@ -18,7 +25,9 @@ print('***************************************')
 #through trial and error I eventually figured it out
 coffeeAmount = coffeesPurchased * COFFEE
 muffinAmount = muffinsPurchased * MUFFINS
-orderTotal = coffeeAmount + muffinAmount
+donutAmount = donutsPurchased * DONUTS
+teaAmount = teasPurchased * TEA
+orderTotal = coffeeAmount + muffinAmount + donutAmount + teaAmount
 afterTax = orderTotal * TAX
 totalAfterTax = orderTotal + afterTax
 
@@ -31,4 +40,5 @@ print('6% Tax: $' + str(afterTax))
 print('---------')
 print('Total: $ ' + str(totalAfterTax))
 print('***************************************')
+print('Thank you for your continued patronage!')
 
