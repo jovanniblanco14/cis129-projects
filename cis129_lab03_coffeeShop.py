@@ -3,7 +3,7 @@ TAX = .06
 COFFEE = 5
 MUFFINS = 4
 DONUTS = 3
-TEAS = 4
+TEA = 4
 
 
 #I will start with welcome message and a prompt for the user
