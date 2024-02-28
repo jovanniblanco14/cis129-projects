@@ -14,7 +14,7 @@ monthlySales = 0  # monthly sales amount
 storeAmount = 0  # store bonus amount
 empAmount = 0  # employee bonus amount
 salesIncrease = 0  # percent of sales increase
-prompt = ('Enter the monhtly sales ')
+prompt = ('Enter the monthly sales ')
 
     
 
