@@ -1,0 +1,33 @@
+# Module 5 Lab-5
+# Jovanni Blanco
+# 03/07/2024
+# counter for collecting bottles throughout the week
+
+#declare the local variables
+totalBottles = 0
+counter = 1
+todayBottles = 0
+totalPayout = 0
+keepGoing = 'y'
+NBR_OF_DAYS = 7
+PAYOUT_PER_BOTTLE = .10
+
+while keepGoing == 'y':
+    
+#set variable totalBottles to contain the total numbers of bottles for the week.
+    while counter <= NBR_OF_DAYS:
+        todayBottles = int(input(f'Enter number of bottles for day #{counter}: '))
+        totalBottles = todayBottles + totalBottles
+        counter += 1
+        
+#set totalPayout using totalBottles to return the total payout for the week.
+    counter = 1
+    totalPayout = totalBottles * PAYOUT_PER_BOTTLE
+
+
+#code that prints out the total number of bottles collected and total payout
+    print('The total number of bottles collected is ', totalBottles)
+    print(f'The total paid out is ${totalPayout: .1f}')
+    print()
+    keepGoing = input('Do you want to enter another week\'s worth of data? (Enter y or n): ')
+    print()
