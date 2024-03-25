@@ -1,0 +1,34 @@
+#Jovanni Blanco
+#Hotdog Cookout Calculator
+#20 March 2024 Start date
+import math
+def main():
+    total = 0
+    DOGS = 10
+    BUNS = 8
+    total = getTotalHotDogs()
+    dogsLeft = 0
+    bunsLeft = 0
+    minDogs = 0
+    minBuns = 0
+    dogsLeft = (DOGS - total % DOGS) % DOGS
+    minDogs = math.ceil(total / DOGS)
+    bunsLeft = (BUNS - total % BUNS) % BUNS
+    minBuns = math.ceil(total / BUNS)
+    showResults(dogsLeft, minDogs, bunsLeft, minBuns)
+
+def getTotalHotDogs():
+    people = 0
+    hotDogs = 0
+    people = int(input('Enter number of people attending the cookout: '))    
+    hotDogs = int(input("Enter the number of hot dogs for each person: "))
+    total = people * hotDogs
+    return total
+
+def showResults(dogsLeft, minDogs, bunsLeft, minBuns):
+    print("Minimum packages of hot dogs needed: ", minDogs)
+    print("Minimum packages of hot dog buns needed: ", minBuns)
+    print("Hot dogs left over: ", dogsLeft)
+    print("Hot dog buns left over: ", bunsLeft)
+
+main()
