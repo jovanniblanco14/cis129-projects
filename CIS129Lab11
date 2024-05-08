@@ -1,0 +1,42 @@
+#Lab 11 Part I
+with open('grades.txt', mode='w') as grades:
+    while True:
+        addGrade = int(input("Please enter grades. (-99 to end) "))
+        if addGrade <= 100 and addGrade >= 0 and addGrade != -99:
+            print(addGrade, file=grades)
+        else:
+            break
+
+#Module 11 Lab Part II
+# Read grades from the text file and display the total, count and average.
+figureTotal = 0
+count = 0
+gradeValue = 1
+with open("grades.txt", mode = 'r') as grades:
+    for figure in grades:
+        
+        print("grade:",gradeValue,":", float(figure))
+        count += 1
+        gradeValue +=1
+        figureTotal += float(figure)
+average = figureTotal/count   
+print("The total is:", figureTotal)
+print("The count is:", count)
+print("The average is:", average)
+
+#Module 11 Lab Part III
+import csv
+with open('grades.csv', mode='w', newline='') as students:
+    writer = csv.writer(students)
+    while True:
+        firstName = input("Please enter student's first name: ")
+        lastName = input("Please enter student's last name: ")
+        exam1 = int(input("Please enter the first exam grade: "))
+        exam2 = int(input("Please enter the second exam grade: "))
+        exam3 = int(input("Please enter the third exam grade: "))
+        print(firstName, lastName, exam1, exam2, exam3)
+        writer.writerow([firstName, lastName, exam1, exam2, exam3])
+        exit = int(input("Press '-99' to exit, any number key to enter a new student's information: "))
+        if exit == -99:
+            break
+    
